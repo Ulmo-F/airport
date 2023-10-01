@@ -1,4 +1,8 @@
-add_library(Geometry SHARED Geometry/Utils.cpp)
+add_library(Geometry SHARED
+    Geometry/BoundingBox.cpp
+    Geometry/Point.cpp
+    Geometry/Utils.cpp
+)
 
 target_include_directories(Geometry PUBLIC .)
 

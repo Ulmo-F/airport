@@ -1,4 +1,7 @@
-add_executable(Geometry_test basic.cpp)
+add_executable(Geometry_test
+    basic.cpp
+    BoundingBox.test.cpp
+)
 
 target_link_libraries(Geometry_test   Geometry GTest::gtest_main)
 
