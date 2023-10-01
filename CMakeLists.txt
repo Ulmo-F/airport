@@ -21,22 +21,6 @@ FetchContent_Declare(
 # set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-# FetchContent_Declare(
-#     eigen3
-#     GIT_REPOSITORY https://gitlab.com/libeigen/eigen
-#     GIT_TAG 3.4.0
-# )
-# FetchContent_MakeAvailable(eigen3)
-
-FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG        v1.12.0
-)
-
-FetchContent_MakeAvailable(spdlog)
-# FetchContent_GetProperties(spdlog)
-
 include(CTest)
 include(GoogleTest)
 

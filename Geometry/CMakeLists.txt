@@ -1,12 +1,7 @@
-add_library(Geometry SHARED
-    Geometry/BoundingBox.cpp
-    Geometry/Point.cpp
-    Geometry/Utils.cpp
-)
+file(GLOB_RECURSE LIB_SOURCE CONFIGURE_DEPENDS Geometry/*.cpp)
+add_library(Geometry SHARED ${LIB_SOURCE})
 
 target_include_directories(Geometry PUBLIC .)
-
-target_link_libraries(Geometry PUBLIC spdlog::spdlog)
 
 # set_property(TARGET Geometry PROPERTY COMPILE_WARNING_AS_ERROR ON)
 # target_compile_options(Geometry PRIVATE

@@ -4,7 +4,7 @@
 
 namespace {
 
-TEST(Utils, Dummy) {
+TEST(BoundingBox, create) {
     std::vector<Point> points {
         { 1., 2. },
         { 3., 4. },
@@ -14,7 +14,7 @@ TEST(Utils, Dummy) {
     EXPECT_EQ(BoundingBox::create(points), BoundingBox({0., -2.}, {3., 4.}));
 }
 
-TEST(Utils, init) {
+TEST(BoundingBox, throws_on_empty_input) {
     std::vector<Point> emptyVector;
     EXPECT_ANY_THROW( (BoundingBox::create(emptyVector)) );
 }
