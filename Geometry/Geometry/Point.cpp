@@ -7,6 +7,8 @@ double distance(const Point&p1, const Point&p2) {
 }
 
 bool Point::operator==(const Point& other) const {
+    // Note: == is quite problematic on 'double' but our entries are assumed to be integers
+    // !! beware, any barycenter-like operation will blow away this assumption !!
     return x == other.x && y == other.y;
 }
 

@@ -14,7 +14,7 @@ void help(const char* exeName) {
               << "      0: Display the bounding box of all points\n"
               << "      1: search most distant points, allowing crossings\n"
               << "      2: search most distant points among the given points, without considering crossing boundaries\n"
-//              << "      3: search most distant points, without considering crossing boundaries\n"
+              << "      3: search most distant points, not crossing boundaries\n"
         ;
 }
 
@@ -53,7 +53,7 @@ int main(int argc, const char* argv[]) {
             std::cout << "Greatest distance: " << greatestDistance(points) << "\n";
             break;
         case '2':
-            std::cout << "TODO\n";
+            std::cout << "Longest strip: " << greatestDistanceWithoutIntersect(points) << "\n";
             break;
         case '3':
             std::cout << "TODO\n";
