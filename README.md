@@ -1,6 +1,8 @@
 # airport
 
-# Compile
+# Compile : Linux + cmake
+(checked with gcc 11)
+
 mkdir build && cd build
 
 cmake ..
@@ -8,6 +10,9 @@ cmake ..
 make
 
 [ctest]
+
+# Compile : MSVC
+TODO
 
 # Usage
 ./build/airport data/sample1.txt 2
